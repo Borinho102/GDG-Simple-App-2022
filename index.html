@@ -37,10 +37,10 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto ms-5 mb-2 mb-md-0">
               <li class="nav-item me-0 me-md-3">
-                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
               </li>
               <li class="nav-item mx-0 mx-md-3">
-                <a class="nav-link" href="#">Cloud Storage</a>
+                <a class="nav-link" href="storage.html">Cloud Storage</a>
               </li>
               <li class="nav-item mx-0 mx-md-3">
                 <a class="nav-link" href="#">Cloud Messaging</a>
@@ -75,8 +75,10 @@
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
-    <script>
+    <script type="module">
+
       var firebaseConfig = {
         apiKey: "AIzaSyA0etWKm_lV1QL7QFBaex5vc9iHjFKqPEg",
         authDomain: "gdg2022-f218d.firebaseapp.com",
@@ -88,6 +90,23 @@
       };
       firebase.initializeApp(firebaseConfig);
       firebase.analytics()
+
+      // Initialize Cloud Storage and get a reference to the service
+      const storage = firebase.storage();
+
+      // Create a storage reference from our storage service
+      var storageRef = storage.ref();
+
+      // Create a child reference
+      var imagesRef = storageRef.child('static/firebase.png');
+      // imagesRef now points to 'static'
+
+
+      console.log(imagesRef)
+      console.log(imagesRef.fullPath)
+      console.log(imagesRef.bucket)
+      console.log(imagesRef.name)
+
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async></script>
   </body>

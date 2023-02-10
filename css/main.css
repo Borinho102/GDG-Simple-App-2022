@@ -316,3 +316,10 @@ textarea {
 main > .container {
   padding: 60px 15px 0;
 }
+
+.center {
+  text-align: center;
+  margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
+}

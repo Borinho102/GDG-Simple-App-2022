@@ -1,0 +1,248 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:title" content="">
+    <meta property="og:type" content="">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="icon"
+      href="https://firebasestorage.googleapis.com/v0/b/gdg2022-f218d.appspot.com/o/static%2Fgdg.svg?alt=media&token=1295bb63-71b7-4634-9192-377fba3515a1"
+      />
+    <!-- Place favicon.ico in the root directory -->
+
+    <title>Google Developer Group 2022</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous">
+    <meta name="theme-color" content="#fafafa">
+    <script src="dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="dist/sweetalert2.min.css">
+
+  </head>
+
+  <body class="d-flex flex-column h-100">
+
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <img style="width: 70px; height: 70px;"
+            src="https://firebasestorage.googleapis.com/v0/b/gdg2022-f218d.appspot.com/o/static%2Fgdg.svg?alt=media&token=1295bb63-71b7-4634-9192-377fba3515a1"
+            alt="GDG" />
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse" aria-controls="navbarCollapse"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto ms-5 mb-2 mb-md-0">
+              <li class="nav-item me-0 me-md-3">
+                <a class="nav-link" href="#">Accueil</a>
+              </li>
+              <li class="nav-item mx-0 mx-md-3">
+                <a class="nav-link active" aria-current="page"
+                  href="storage.html">Cloud Storage</a>
+              </li>
+              <li class="nav-item mx-0 mx-md-3">
+                <a class="nav-link" href="#">Cloud Messaging</a>
+              </li>
+              <li class="nav-item ms-0 ms-md-3">
+                <a class="nav-link" href="#">Crashlytics</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main class="d-flex mb-5" style="height: 88vh; background:
+      url('img/web.png'); background-repeat: no-repeat; background-size: cover">
+      <div class="container align-content-center align-items-center
+        align-self-center flex mt-3">
+        <h1 class="text-center">Firebase Cloud Storage</h1><br/><br/>
+            <table class="table table-dark mt-5 table-striped border">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Nom</th>
+                  <th scope="col">Chemin d'acc&egrave;s</th>
+                  <th scope="col" class="text-end">
+                    <form id="form">
+                      <input style="display: none;" type="file" accept="image/*" name="files" multiple="false" id="files"/>
+                      <button type="button" class="btn btn-primary w-100 btn-sm" id="btn">Charger un
+                        fichier
+                        &nbsp; <b class="fa fa-upload"></b></button>
+                    </form>
+                  </th>
+                </tr>
+              </thead>
+              <tbody id="content">
+              </tbody>
+
+              <img id="image" src="img/img.png" class="img-thumbnail rounded
+                mx-auto d-block" style="width: 300px; height: auto;" alt="GDG
+                Image Place Holder">
+
+            </table>
+
+          </div>
+        </main>
+
+        <footer class="footer mt-auto py-4 bg-dark text-white">
+          <div class="container text-center">
+            <span class="text-muted">&copy; Copyright GDG <script>document.write(new Date().getFullYear())</script>.
+              Tous droits reserv&eacute;s</span>
+          </div>
+        </footer>
+
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+          crossorigin="anonymous"></script>
+        <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script
+          src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+        <script
+          src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+
+        <script type="module">
+
+            var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+            var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+            })
+
+            var firebaseConfig = {
+              apiKey: "AIzaSyA0etWKm_lV1QL7QFBaex5vc9iHjFKqPEg",
+              authDomain: "gdg2022-f218d.firebaseapp.com",
+              projectId: "gdg2022-f218d",
+              storageBucket: "gdg2022-f218d.appspot.com",
+              messagingSenderId: "359751155735",
+              appId: "1:359751155735:web:905644fb717225bc235c52",
+              measurementId: "G-CHW75DB2KE"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics()
+
+            // Initialize Cloud Storage and get a reference to the service
+            const storage = firebase.storage();
+
+            // Create a storage reference from our storage service
+            var storageRef = storage.ref();
+
+            // Create a child reference
+            var imagesRef = storageRef.child('static');
+            // imagesRef now points to 'static'
+
+            let arr = []
+
+            function syncTable(){
+
+              var content = ""
+
+              var img = imagesRef.listAll()
+              .then((res) => {
+                res.prefixes.forEach((folderRef) => {
+                  console.log(folderRef)
+                });
+                res.items.forEach((itemRef, i) => {
+                  var im = itemRef.fullPath
+                  content += "<tr><th scope='row'><a id='img-" + i + "' href=''><b class='fa text-warning fa-eye'></b></a></th><td>" + itemRef.name + "</td><td id='item-" + i +
+                    "' colspan=''>" + im + "</td><td><button id='del-" + i + "' class='btn btn-danger w-100 btn-sm'>Supprimer &nbsp; <b class='fa fa-trash'></b></button></td></tr>"
+                });
+                document.querySelector("#content").innerHTML = content
+                res.items.forEach((itemRef, i) => {
+                  var starsRef = storageRef.child(itemRef.fullPath);
+                  $('#del-' + i).click(function() {
+                    Swal.fire({
+                      title: 'Supprimer le fichier sur Firebase',
+                      showCancelButton: true,
+                      icon: 'question',
+                      confirmButtonText: 'Supprimer',
+                      cancelButtonText: 'Annuler',
+                      showLoaderOnConfirm: true,
+                      preConfirm: (login) => {
+                        return starsRef.delete().then((snapshot) => {
+                          syncTable()
+                        })
+                      },
+                      allowOutsideClick: () => !Swal.isLoading()
+                    }).then((result) => {
+                      if (result.isConfirmed) {
+                        Swal.fire('Fichier Supprimé', '', 'success')
+                      }
+                    })
+                  });
+                  starsRef.getDownloadURL()
+                    .then((url) => {
+                      document.querySelector("#img-" + i).href = url
+                    })
+                    .catch((error) => {
+                      console.log(error)
+                    });
+                });
+
+              }).catch((error) => {
+                console.error(error)
+              });
+            }
+
+            syncTable();
+
+            $('#btn').click(function() {
+                $('#files').click();
+            });
+
+            $('#files').change(function(event) {
+                var vals = $(this).val(),
+                val = vals.length ? vals.split('\\').pop() : '';
+                var imageRef = storageRef.child('static/' + val);
+                let f = event.target.files[0]
+                let url = URL.createObjectURL(f)
+                Swal.fire({
+                  title: 'Charger le fichier sur Firebase',
+                  showCancelButton: true,
+                  imageUrl: url,
+                  confirmButtonText: 'Charger',
+                  cancelButtonText: 'Annuler',
+                  showLoaderOnConfirm: true,
+                  preConfirm: (login) => {
+                    return imageRef.put(event.target.files[0]).then((snapshot) => {
+                      syncTable()
+                    })
+                  },
+                  allowOutsideClick: () => !Swal.isLoading()
+                }).then((result) => {
+                  if (result.isConfirmed) {
+                    Swal.fire('Fichier Chargé', '', 'success')
+                  }
+                })
+            });
+
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async></script>
+      </body>
+
+    </html>
